@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>The Newsletter Engine — Turn Your Email List Into a Revenue Machine in 30 Days</title>
   <meta name="description" content="A 30-day email course for founders and marketers who want to turn their newsletter into a profitable business asset. $197. Daily emails. Real results.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FF4500' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 4h16v16H4z'/><path d='M4 9l8 5 8-5'/></svg>">
@@ -766,98 +766,94 @@
     }
 
     /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
+
+    /* ── TABLET & BELOW (≤ 1024px): hide forced breaks, tighten sections ── */
+    @media (max-width: 1024px) {
+      h1 br, h2 br { display: none; }
+      section { padding: 80px 0; }
+    }
+
+    /* ── TABLET only (641px – 1024px) ── */
+    @media (min-width: 641px) and (max-width: 1024px) {
+      h1 { font-size: clamp(2.2rem, 4.5vw, 3.6rem); }
+      h2 { font-size: clamp(1.75rem, 3.5vw, 2.6rem); }
+      .guide-layout { gap: 36px; }
+      .guide-stat-num { font-size: 1.4rem; }
+      .phase-item { grid-template-columns: 68px 1fr; gap: 24px; }
+      .price-card { padding: 48px 36px; }
+      .objection-card { padding: 28px; }
+    }
+
+    /* ── MOBILE (≤ 640px) ── */
+    @media (max-width: 640px) {
       body { font-size: 16px; }
 
       section { padding: 56px 0; }
 
-      /* Remove forced line breaks — let text reflow naturally */
-      h1 br, h2 br { display: none; }
+      h1 { font-size: clamp(1.85rem, 8vw, 2.4rem); }
+      h2 { font-size: clamp(1.5rem, 6vw, 1.9rem); }
 
-      h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); }
-      h2 { font-size: clamp(1.55rem, 6vw, 2rem); }
-
-      /* Header */
-      .logo-name { font-size: 0.95rem; }
+      /* Header: prevent overflow on narrow phones */
+      .logo-name { font-size: 0.85rem; }
+      header .btn { padding: 8px 14px; font-size: 0.8rem; }
 
       /* Hero */
-      #hero {
-        padding-top: calc(var(--hh) + 40px);
-        padding-bottom: 56px;
-      }
-      .hero-cta { margin-bottom: 40px; }
+      #hero { padding-top: calc(var(--hh) + 40px); padding-bottom: 56px; }
+      .hero-cta { margin-bottom: 36px; }
 
-      /* Trust badges: 2×2 grid */
-      .trust-badges {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px 16px;
-      }
+      /* Trust badges → 2×2 grid */
+      .trust-badges { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
       .trust-divider { display: none; }
 
       /* Math anchor */
-      .stat-contrast {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
+      .stat-contrast { grid-template-columns: 1fr; gap: 12px; }
       .vs-badge { text-align: center; padding: 4px 0; }
-      .stat-box { padding: 24px; }
+      .stat-box { padding: 24px 20px; }
 
       /* Agitation */
-      .story-block { padding: 20px 20px; }
+      .story-block { padding: 20px; }
       .callout-box { padding: 28px 20px; }
 
       /* Filter */
       .filter-grid { grid-template-columns: 1fr; }
-      .filter-col { padding: 24px 20px; }
+      .filter-col { padding: 22px 20px; }
 
       /* Guide */
-      .guide-layout {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
+      .guide-layout { grid-template-columns: 1fr; gap: 24px; }
       .guide-photo { width: 100px; height: 100px; }
-      .guide-stats { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-      .guide-stat { padding: 14px 10px; }
-      .guide-stat-num { font-size: 1.3rem; }
+      .guide-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .guide-stat { padding: 12px 8px; }
+      .guide-stat-num { font-size: 1.2rem; }
+      .guide-stat-label { font-size: 0.65rem; }
 
       /* Deliverables */
       .asset-grid { grid-template-columns: 1fr; }
-      .bonus-panel { padding: 24px 20px; }
+      .bonus-panel { padding: 22px 20px; }
 
       /* Mechanism */
-      .phase-item {
-        grid-template-columns: 56px 1fr;
-        gap: 16px;
-        padding: 24px 0;
-      }
-      .phase-num { width: 40px; height: 40px; font-size: 1rem; }
+      .phase-item { grid-template-columns: 52px 1fr; gap: 16px; padding: 22px 0; }
+      .phase-num { width: 38px; height: 38px; font-size: 0.95rem; }
 
       /* Pricing */
-      .price-card { padding: 36px 20px; }
+      .price-card { padding: 32px 20px; }
 
       /* Objections */
-      .objection-card { padding: 24px 20px; }
+      .objection-card { padding: 22px 20px; }
 
       /* Crossroads */
       .crossroads-grid { grid-template-columns: 1fr; }
-      .path { padding: 24px 20px; }
+      .path { padding: 22px 20px; }
 
-      /* All large CTA buttons: full width on mobile */
-      .btn-xl {
-        padding: 16px 20px;
-        font-size: 1rem;
-        width: 100%;
-        display: flex;
-      }
+      /* All large CTAs: full width */
+      .btn-xl { padding: 16px 20px; font-size: 1rem; width: 100%; display: flex; }
     }
 
-    /* Very small screens (iPhone SE, etc.) */
+    /* ── VERY SMALL (≤ 390px) ── */
     @media (max-width: 390px) {
       .wrap { padding: 0 16px; }
       .hd { padding: 0 16px; }
-      h1 { font-size: 1.75rem; }
-      h2 { font-size: 1.4rem; }
+      h1 { font-size: 1.7rem; }
+      h2 { font-size: 1.35rem; }
     }
   </style>
 </head>
