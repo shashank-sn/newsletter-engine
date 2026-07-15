@@ -1,0 +1,14 @@
+---
+description: Global taste index — apply category taste rules when relevant
+alwaysApply: true
+---
+
+# Global taste
+
+This repo carries git-backed global taste synced from `skills-taste`.
+
+- Read `.agents/taste/{category}/taste.md` when working in that domain.
+- Category rules under `.cursor/rules/imported/taste/` scope by file globs.
+- Per-repo overrides live in `.cursor/rules/taste-*.mdc`.
+
+Promotion and learning run via Cursor automations; local Agent chat receives taste through these rules and skills only (not Memories directly).

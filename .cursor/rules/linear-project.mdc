@@ -1,0 +1,16 @@
+---
+description: Repo-scoped Linear project hint — extend with repo-specific issue conventions
+globs: "**/*"
+alwaysApply: false
+---
+
+# Linear for this repo
+
+Global Linear workflow: `.cursor/rules/imported/linear/linear-planning.mdc` (synced from skills-taste).
+
+Add repo-specific notes here:
+- Default Linear project name for this repo
+- Issue label conventions
+- Release / milestone mapping
+
+Do not duplicate the global repo→project table — update it in skills-taste if mappings change.

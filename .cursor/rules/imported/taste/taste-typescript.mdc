@@ -1,0 +1,14 @@
+---
+description: TypeScript taste — exports, modules, default branch conventions
+globs: "**/*.{ts,tsx,mts,cts}"
+alwaysApply: false
+---
+
+# TypeScript taste
+
+Apply learnings from `.agents/taste/typescript/taste.md` when editing TypeScript:
+
+- Prefer **named exports** unless re-exporting a library default.
+- Default git branch for shashank-sn repos is **`initial`** — not main/master.
+
+When taste conflicts with an explicit project rule in `taste-*.mdc`, project rules win.

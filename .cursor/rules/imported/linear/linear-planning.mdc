@@ -1,0 +1,51 @@
+---
+description: All planning, todos, and issue tracking via Linear — local, cloud, and iOS
+alwaysApply: true
+---
+
+# Linear-first planning
+
+Applies on **local IDE**, **cloud agents**, and **Cursor iOS** — repo rules sync via `skills-taste` install hooks.
+
+Linear MCP (`linear` / `user-linear`) is the system of record. Workspace: https://linear.app/shashank-sn
+
+## Hard rules
+
+- **Never use TodoWrite** or chat-only task lists. Use Linear issues.
+- **Never leave work untracked.** Create or find a Linear issue before coding.
+- **Never store plans only in chat.** Put acceptance criteria in the issue or child issues.
+- **Always resolve the Linear project** from the repo name before creating issues.
+
+## Resolve Linear project
+
+**Project name = GitHub repo name** (basename from `git remote` or folder name).
+
+Examples: `brandeey` → project `brandeey`, `sayaboutus-service-core` → project `sayaboutus-service-core`.
+
+Org/owner is in the project summary (`github.com/{owner}/{repo}`). If unsure, `list_projects` and match by name.
+
+## Session start
+
+1. Resolve repo name from workspace path or `git remote`.
+2. **Linear project name = repo name** (exact match).
+3. `list_issues` for that project — report in-progress and todo items.
+4. If work has no issue ID, search Linear first; create only if none exists.
+
+## During work
+
+| Event | Linear action |
+|-------|---------------|
+| Start | **In Progress** |
+| Sub-work | Child issues |
+| Blocked | Comment + **Blocked** / `blockedBy` |
+| PR ready | Comment + **In Review** |
+| Shipped | **Done** |
+
+PR/branch names include issue ID (e.g. `SHA-42: fix landing QA`).
+
+## Planning shape
+
+- Small task → one issue + checklist in description
+- Feature → parent + child issues per milestone
+- Bug → one issue (+ `Bug` label if exists)
+- Spike → Todo issue; findings in comments before code

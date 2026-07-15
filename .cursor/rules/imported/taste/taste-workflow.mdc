@@ -1,0 +1,22 @@
+---
+description: Portable workflow taste — git defaults, shipping gate, cloud skills
+globs: "**/*"
+alwaysApply: false
+---
+
+# Workflow taste
+
+## Git
+
+- Default branch is `initial` for shashank-sn repos (not main/master).
+- Do not commit/push/deploy/open PR unless the user explicitly asks.
+- When the user says "do it for me" or similar, execute autonomously but still respect the shipping gate unless they also ask to ship.
+
+## Skills
+
+- Personal skills canonical path: iCloud `commandcode-skills` → remote `skills-taste`.
+- Cloud repos use `.cursor/environment.json` with `repositoryDependencies` + taste install hook.
+
+## Communication
+
+- Be direct; no fluff. Code citations use ```startLine:endLine:path format.

@@ -1,0 +1,18 @@
+---
+description: Per-repo taste seed — extend with project-specific learnings
+globs: "**/*"
+alwaysApply: false
+---
+
+# Project taste
+
+This file is the seed for **repo-specific** taste. Add conventions that apply only to this codebase.
+
+Global taste arrives via `.cursor/rules/imported/taste/` (synced from `skills-taste`).
+
+Examples to add here:
+- Framework-specific patterns
+- Team naming conventions
+- Test layout preferences
+
+Do not duplicate global workflow rules — those live in imported `taste-workflow.mdc`.
